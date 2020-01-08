@@ -15,4 +15,9 @@ public class Point {
 	public Point add(Point other) {
 		return new Point(this.x + other.x, this.y + other.y);
 	}
+
+	public Point subtract(Point other) {
+		Point negativeOther = new Point(-other.x, -other.y);
+		return this.add(negativeOther);
+	}
 }
