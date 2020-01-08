@@ -19,6 +19,8 @@ public class Main {
 
 		System.out.println(p + " + " + q + " = " + r);
 		System.out.println(p + " - " + q + " = " + s);
+		System.out.println(p + " == " + q + " // => " + (p == q));
+		System.out.println(p + ".equals(" + q + ") // => " + p.equals(q));
 
 		br.close();
 	}
