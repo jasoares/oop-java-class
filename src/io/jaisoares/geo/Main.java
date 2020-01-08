@@ -10,9 +10,9 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		System.out.println("Enter coordinates x and y for point P (e.g. \"1, 3\")");
-		Point p = readPoint(br);
+		Point p = Point.read(br);
 		System.out.println("Enter coordinates x and y for point Q (e.g. \"1, 3\")");
-		Point q = readPoint(br);
+		Point q = Point.read(br);
 
 		Point r = p.add(q);
 		Point s = p.subtract(q);
@@ -21,19 +21,5 @@ public class Main {
 		System.out.println(p + " - " + q + " = " + s);
 
 		br.close();
-	}
-
-	private static Point readPoint(BufferedReader br) throws IOException {
-		int x, y;
-		Point p = null;
-		try {
-			String[] coords = br.readLine().split(",\\s*");
-			x = Integer.parseInt(coords[0]);
-			y = Integer.parseInt(coords[1]);
-			p = new Point(x, y);
-		} catch (IOException ioe) {
-			System.out.println("Error reading your point coordinates" + ioe);
-		}
-		return p;
 	}
 }
