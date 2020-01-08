@@ -24,6 +24,10 @@ public class Point {
 		return this.add(negativeOther);
 	}
 
+	public Boolean equals(Point other) {
+		return this.x == other.x && this.y == other.y;
+	}
+
 	public static Point read(BufferedReader br) throws IOException {
 		int x, y;
 		Point p = null;
