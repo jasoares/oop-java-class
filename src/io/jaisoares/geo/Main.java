@@ -22,6 +22,10 @@ public class Main {
 		System.out.println(p + " == " + q + " // => " + (p == q));
 		System.out.println(p + ".equals(" + q + ") // => " + p.equals(q));
 
+		p.setX(3);
+		System.out.println("p.setX(3) // => " + p);
+		System.out.println("p.getY() // => " + p.getY());
+
 		br.close();
 	}
 }
